@@ -1,0 +1,236 @@
+/* Variables de colores */
+:root {
+  --primary-color: #5D04D9;
+  --secondary-color: #03318C;
+  --text-color: #ffffff;
+  --card-background: #D6D6D6;
+  --border-color: #ccc;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #ffffff;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  box-shadow: 0px 5px 10px var(--shadow-color);
+}
+
+/* Main layout */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Product Section */
+.product-section {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.product-section__title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.product-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  gap: 20px; /* Espacio entre tarjetas */
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+}
+
+/* Tarjeta de producto */
+.product-card {
+  background-color: var(--primary-color);
+  border: 4px solid #000; /* Borde exterior negro */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 10px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%; /* Ancho completo dentro de su contenedor */
+  max-width: 250px;
+  height: 300px; /* Altura fija */
+  position: relative; /* Para posicionar el botón eliminar */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+/* Imagen dentro de la tarjeta */
+.product-card__image {
+  width: 100%;
+  height: 200px; /* Altura fija */
+  object-fit: cover; /* Ajuste sin deformar */
+  border: 4px solid #000; /* Borde grueso negro alrededor de la imagen */
+  border-radius: 15px; /* Redondeado */
+  margin-bottom: 15px; /* Espaciado debajo de la imagen */
+}
+
+/* Título del producto */
+.product-card__title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 5px 0;
+  text-align: left;
+}
+
+/* Precio del producto */
+.product-card__price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 10px 0;
+  text-align: left;
+}
+
+/* Botón de eliminar */
+.product-card__delete {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 20px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.product-card__delete:hover {
+  transform: scale(1.2); /* Efecto de agrandamiento */
+  color: red; /* Cambia el color al pasar el mouse */
+}
+
+/* Add Product Section */
+.add-product {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px var(--shadow-color);
+}
+
+.add-product__title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.add-product__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-product__input {
+  padding: 5px 8px;
+  font-size: 0.8rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 30px;
+}
+
+.add-product__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.add-product__button {
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.add-product__button:hover {
+  background-color: var(--text-color);
+  color: var(--secondary-color);
+}
+
+.mensaje__error {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+  font-size: 0.9rem;
+  box-shadow: 0px -5px 10px var(--shadow-color);
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .product-section__grid {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  }
+  .add-product {
+    order: 1;
+    width: 100%;
+  }
+  .product-section {
+    order: 2;
+    width: 100%;
+  }
+  .product-card {
+    flex: 1 1 calc(50% - 20px); /* Dos columnas */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-section__grid {
+    grid-template-columns: 1fr; /* Una columna */
+  }
+  .product-card {
+    flex: 1 1 100%; /* Una columna */
+  }
+  .product-section {
+    order: 2;
+    width: 100%;
+  }
+}

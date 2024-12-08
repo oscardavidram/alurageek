@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AluraGeek</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header__logo">
+        <span>❤️❤️❤️ AluraGeek</span>
+      </div>
+    </header>
+    <main class="main">
+      <section class="product-section">
+        <h2 class="product-section__title">MIS PRODUCTOS:</h2>
+        <div class="product-section__grid" data-lista>
+          <!-- Aquí se agregarán las tarjetas de productos -->
+        </div>
+      </section>
+      <section class="add-product">
+        <h2 class="add-product__title">AGREGAR PRODUCTO:</h2>
+        <form class="add-product__form" id="add-product-form" data-formulario>
+          <input class="add-product__input" type="text" id="product-name" placeholder="nombre..." required data-titulo>
+          <input class="add-product__input" type="text" id="product-price" placeholder="precio..." required data-precio>
+          <input class="add-product__input" type="url" id="product-image" placeholder="imagen..." required data-imagen>
+          <div class="add-product__buttons">
+            <button class="add-product__button" type="submit">Enviar</button>
+            <button class="add-product__button add-product__button--reset" type="reset">Limpiar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">❤️❤️❤️ AluraGeek</p>
+      <p class="footer__text">DESARROLLADO POR [TU NOMBRE]</p>
+      <p class="footer__text">ALURA LATAM - 202X</p>
+    </footer>
+  </div>
+  <script src="./js/mostrarProducto.js" type="module"></script>
+  <script src="./js/crearProducto.js" type="module"></script>
+  <!-- <script src="./js/buscarProducto.js" type="module"></script> -->
+</body>
+</html>

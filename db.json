@@ -1,0 +1,46 @@
+{
+  "mis_productos": [
+    {
+      "id": "4",
+      "titulo": "Nintento switch",
+      "precio": 1500000,
+      "imagen": "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_800/ncom/My%20Nintendo%20Store/EN-US/Hardware/nintendo-switch-oled-model-the-legend-of-zelda-tears-of-the-kingdom-edition-112870/112870-legend-of-zelda-tears-of-the-kingdom-switch-oled-special-edition-joy-con-and-strap-front-1200x675"
+    },
+    {
+      "id": "7",
+      "titulo": "Nintento switch",
+      "precio": 1234567,
+      "imagen": "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_800/ncom/My%20Nintendo%20Store/EN-US/Hardware/nintendo-switch-oled-model-the-legend-of-zelda-tears-of-the-kingdom-edition-112870/112870-legend-of-zelda-tears-of-the-kingdom-switch-oled-special-edition-package-1200x675"
+    },
+    {
+      "id": "8",
+      "titulo": "Zoro Wado Ichimoji",
+      "precio": 1500000,
+      "imagen": "https://m.media-amazon.com/images/I/617AqUVfKXL.jpg"
+    },
+    {
+      "id": "9",
+      "titulo": "Katana Tanjiro",
+      "precio": 10580000,
+      "imagen": "https://acerosdetoletum.com/wp-content/uploads/2022/02/kimetsu_verde-600x600.jpg"
+    },
+    {
+      "id": "10",
+      "titulo": "Barbie Emo",
+      "precio": 80000,
+      "imagen": "https://images.nightcafe.studio/jobs/2hMX9oHY4qLQ1UeZqO5i/2hMX9oHY4qLQ1UeZqO5i--1--ncc9i.jpg?tr=w-1600,c-at_max"
+    },
+    {
+      "id": "11",
+      "titulo": "Star wars Lego",
+      "precio": 449900,
+      "imagen": "https://toysmart.co/cdn/shop/files/75383_1800x1800.jpg?v=1716323596"
+    },
+    {
+      "id": "13",
+      "titulo": "Golf para el baño",
+      "precio": 359900,
+      "imagen": "https://m.media-amazon.com/images/I/61soqy9-MJL._AC_SL1000_.jpg"
+    }
+  ]
+}
